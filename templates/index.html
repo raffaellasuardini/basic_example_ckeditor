@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ceci n'est pas un site internet</title>
+</head>
+<body>
+    <div style="width: 700px; margin: auto">
+    <form action="/" method="post">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name(size=30)}} <br>
+        {{ form.comment.label}} {{ form.comment()}}
+        {{ form.submit}}
+    </form>
+    </div>
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='comment') }}
+</body>
+</html>
